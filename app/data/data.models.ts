@@ -6,7 +6,7 @@ export interface BandModel {
 	name: string
 }
 
-declare type BandListModel = BandModel[];
+export type BandListModel = BandModel[];
 
 export interface SongModel {
 	id: number,
@@ -14,4 +14,4 @@ export interface SongModel {
 	band: string
 }
 
-declare type SongListModel = SongModel[];
+export type SongListModel = SongModel[];
