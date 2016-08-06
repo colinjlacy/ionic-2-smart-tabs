@@ -15,7 +15,7 @@ import { BANDS, SONGS } from '../../data/data';
 
 	<ion-content padding class="home">
 		<ion-list>
-			<ion-item *ngFor="let song of songs" (click)="viewSong(song.id)">
+			<ion-item *ngFor="let song of songs">
 				{{song.name}}
 			</ion-item>
 		</ion-list>
@@ -29,9 +29,5 @@ export class SongListingPage {
 	constructor(private nav: NavController, private params: NavParams) {
 		this.band = BANDS.find(x => x.id === this.params.data.bandId);
 		this.songs = SONGS.filter(x => x.band === this.params.data.bandId);
-	}
-
-	viewSong(songId) {
-		console.log(songId);
 	}
 }
