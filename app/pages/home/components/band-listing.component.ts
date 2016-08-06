@@ -12,7 +12,7 @@ import { BANDS } from '../../../data/data';
 	selector: 'band-listing',
 	template: `
 	<ion-list>
-		<ion-item *ngFor="let band of bands" (click)="viewSongs(band.id)">
+		<ion-item *ngFor="let band of bands" (tap)="viewSongs($event, band.id)">
 			{{band.name}}
 		</ion-item>
 	</ion-list>
@@ -26,7 +26,7 @@ export class BandsListing {
 		this.bands = BANDS;
 	}
 
-	viewSongs(bandId) {
+	viewSongs(e, bandId) {
 		console.log(bandId);
 		this.nav.push(SongListingPage, {
 			bandId: bandId
