@@ -13,7 +13,7 @@ import { SOURCES, SONGS } from '../../data/data';
 		<ion-title>{{source.name}}</ion-title>
 	</ion-navbar>
 
-	<ion-content padding class="home">
+	<ion-content>
 		<ion-list>
 			<ion-item *ngFor="let song of songs">
 				{{song.name}}

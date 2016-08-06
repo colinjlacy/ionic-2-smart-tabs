@@ -23,6 +23,6 @@ import { SourceListModel } from './../../data/data.models';
 export class MoviesPage {
 	public movies: SourceListModel;
 	constructor(public nav: NavController) {
-		this.movies = SOURCES.filter(x => x.type === 'band');
+		this.movies = SOURCES.filter(x => x.type === 'movie');
 	}
 }
