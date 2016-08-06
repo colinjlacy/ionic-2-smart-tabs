@@ -1,9 +1,32 @@
 
 <ion-navbar *navbar>
-  <ion-title>
-    About
-  </ion-title>
+	<ion-title>
+		About
+	</ion-title>
 </ion-navbar>
 
 <ion-content padding class="about">
+	<h2>Explanation:</h2>
+	<p>
+		This project was the result of a question that came up on my blog post about programmaticly resetting the history of a navigation stack for an individual tab.
+	</p>
+	<h3>Normal Tab:</h3>
+	<p>
+		The Movies tab will maintain the normal navigation flow, so when a user navigates from the first page to the second page, leaving and re-entering the Movies tab will not reset the nav stack.  The user will re-enter at whichever of those pages they last saw activated.
+	</p>
+	<h3>Reset Tab:</h3>
+	<p>
+		The Bands tab will always reset back to the root of the nav stack - that being the band listing.  In order to do this, I handled the <code>ionSelect</code> event on the Bands tab, and analyzed its internal <code>_views</code> property.  That functionality can probably be extended to build some deeper navigational programming.  You can find the code that provides that functionality in <code>app/pages/tabs/tabs.ts</code>.
+	</p>
+	<h3>To test:</h3>
+	<ul>
+		<li>Tap on the Bands tab</li>
+		<li>Tap on any band to view a list of that band's songs</li>
+		<li>Tap on the Movies tab</li>
+		<li>Tap on any movie to see a song or two from its soundtrack</li>
+		<li>Tap on the Bands tab again</li>
+		<li><strong>You should be brought back to the list of bands</strong></li>
+		<li>Tap on the Movies tab again</li>
+		<li><strong>You should be brought back to the list of songs from the movie you previously selected</strong></li>
+	</ul>
 </ion-content>
