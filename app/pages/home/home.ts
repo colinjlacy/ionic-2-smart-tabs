@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
-import { BandsListing } from './../../components/listing.component.ts';
+import { SourceListing } from './../../components/listing.component.ts';
 import { SOURCES } from './../../data/data';
 import { SourceListModel } from './../../data/data.models';
 
 @Component({
   	templateUrl: 'build/pages/home/home.html',
-	directives: [BandsListing]
+	directives: [SourceListing]
 })
 export class HomePage {
 	public bands: SourceListModel;

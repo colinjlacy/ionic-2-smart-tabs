@@ -66,5 +66,5 @@ export const SONGS: SongListModel = [
 		id: 8,
 		name: 'Light Years',
 		source: 'pearl-jam'
-	}
+	},
 ];

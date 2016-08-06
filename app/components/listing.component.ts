@@ -18,7 +18,7 @@ import { SourceListModel } from '../data/data.models';
 	`,
 
 })
-export class BandsListing {
+export class SourceListing {
 	@Input() sources: SourceListModel;
 
 	constructor(private nav: NavController) {}
