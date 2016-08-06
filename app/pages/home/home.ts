@@ -8,7 +8,5 @@ import { BandsListing } from './components/band-listing.component';
 	directives: [BandsListing]
 })
 export class HomePage {
-  constructor(private navController: NavController) {
-  
-  }
+	constructor(public nav: NavController) {}
 }
