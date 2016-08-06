@@ -1,12 +1,17 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
-import { BandsListing } from './components/band-listing.component';
+import { BandsListing } from './../../components/listing.component.ts';
+import { SOURCES } from './../../data/data';
+import { SourceListModel } from './../../data/data.models';
 
 @Component({
   	templateUrl: 'build/pages/home/home.html',
 	directives: [BandsListing]
 })
 export class HomePage {
-	constructor(public nav: NavController) {}
+	public bands: SourceListModel;
+	constructor(public nav: NavController) {
+		this.bands = SOURCES.filter(x => x.type === 'band');
+	}
 }

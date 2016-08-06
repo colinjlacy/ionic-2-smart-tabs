@@ -1,20 +1,23 @@
 /**
  * Created by colinjlacy on 8/6/16.
  */
-import { BandListModel, SongListModel } from './data.models';
+import { SourceListModel, SongListModel } from './data.models';
 
-export const BANDS: BandListModel = [
+export const SOURCES: SourceListModel = [
 	{
 		id: 'pearl-jam',
-		name: 'Pearl Jam'
+		name: 'Pearl Jam',
+		type: 'band'
 	},
 	{
 		id: 'nirvana',
-		name: 'Nirvana'
+		name: 'Nirvana',
+		type: 'band'
 	},
 	{
 		id: 'soundgarden',
-		name: 'Soundgarden'
+		name: 'Soundgarden',
+		type: 'band'
 	}
 ];
 
@@ -22,46 +25,46 @@ export const SONGS: SongListModel = [
 	{
 		id: 0,
 		name: 'Smells Like Teen Spirit',
-		band: 'nirvana'
+		source: 'nirvana'
 	},
 	{
 		id: 1,
 		name: 'Lithium',
-		band: 'nirvana'
+		source: 'nirvana'
 	},
 	{
 		id: 2,
 		name: 'Heart-Shaped Box',
-		band: 'nirvana'
+		source: 'nirvana'
 	},
 	{
 		id: 3,
 		name: 'Strawman',
-		band: 'soundgarden'
+		source: 'soundgarden'
 	},
 	{
 		id: 4,
 		name: 'Fell on Black Days',
-		band: 'soundgarden'
+		source: 'soundgarden'
 	},
 	{
 		id: 5,
 		name: 'Black Hole Sun',
-		band: 'soundgarden'
+		source: 'soundgarden'
 	},
 	{
 		id: 6,
 		name: 'Jeremy',
-		band: 'pearl-jam'
+		source: 'pearl-jam'
 	},
 	{
 		id: 7,
 		name: 'Better Man',
-		band: 'pearl-jam'
+		source: 'pearl-jam'
 	},
 	{
 		id: 8,
 		name: 'Light Years',
-		band: 'pearl-jam'
+		source: 'pearl-jam'
 	}
 ];

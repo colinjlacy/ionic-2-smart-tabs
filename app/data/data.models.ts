@@ -1,17 +1,18 @@
 /**
  * Created by colinjlacy on 8/6/16.
  */
-export interface BandModel {
+export interface SourceModel {
 	id: string,
-	name: string
+	name: string,
+	type: string
 }
 
-export type BandListModel = BandModel[];
+export type SourceListModel = SourceModel[];
 
 export interface SongModel {
 	id: number,
 	name: string,
-	band: string
+	source: string
 }
 
 export type SongListModel = SongModel[];

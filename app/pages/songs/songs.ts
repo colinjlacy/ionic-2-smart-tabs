@@ -4,13 +4,13 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { BandModel, SongListModel } from '../../data/data.models';
-import { BANDS, SONGS } from '../../data/data';
+import { SourceModel, SongListModel } from '../../data/data.models';
+import { SOURCES, SONGS } from '../../data/data';
 
 @Component({
 	template: `
 	<ion-navbar *navbar>
-		<ion-title>{{band.name}}</ion-title>
+		<ion-title>{{source.name}}</ion-title>
 	</ion-navbar>
 
 	<ion-content padding class="home">
@@ -23,11 +23,11 @@ import { BANDS, SONGS } from '../../data/data';
 	`
 })
 export class SongListingPage {
-	public band: BandModel;
+	public source: SourceModel;
 	public songs: SongListModel;
 
 	constructor(private nav: NavController, private params: NavParams) {
-		this.band = BANDS.find(x => x.id === this.params.data.bandId);
-		this.songs = SONGS.filter(x => x.band === this.params.data.bandId);
+		this.source = SOURCES.find(x => x.id === this.params.data.sourceId);
+		this.songs = SONGS.filter(x => x.source === this.params.data.sourceId);
 	}
 }
