@@ -15,8 +15,7 @@ import { SourceListModel } from '../data/data.models';
 			{{source.name}}
 		</ion-item>
 	</ion-list>
-	`,
-
+	`
 })
 export class SourceListing {
 	@Input() sources: SourceListModel;
