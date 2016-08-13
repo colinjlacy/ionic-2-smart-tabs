@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core'
 import { Tab, Tabs, NavController, Platform } from 'ionic-angular';
 
-import { HomePage } from '../home/home';
+import { UsaPage } from '../usa/usa';
 import { AboutPage } from '../about/about';
-import { MoviesPage } from '../movies/movies';
+import { EuropePage } from '../europe/europe';
 
 @Component({
 	templateUrl: 'build/pages/tabs/tabs.html'
@@ -20,9 +20,9 @@ export class TabsPage {
 	constructor(private nav: NavController, private platform: Platform) {
 		// this tells the tabs component which Pages
 		// should be each tab's root Page
-		this.tab1Root = HomePage;
+		this.tab1Root = UsaPage;
 		this.tab2Root = AboutPage;
-		this.tab3Root = MoviesPage;
+		this.tab3Root = EuropePage;
 
 		this.platform.registerBackButtonAction(() => {
 			let child: Tab = this.tabs.getSelected();

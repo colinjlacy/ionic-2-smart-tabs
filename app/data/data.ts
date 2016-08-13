@@ -5,111 +5,111 @@ import { SourceListModel, SongListModel } from './data.models';
 
 export const SOURCES: SourceListModel = [
 	{
-		id: 'pearl-jam',
-		name: 'Pearl Jam',
-		type: 'band'
+		id: 'new-york',
+		name: 'New York',
+		type: 'usa'
 	},
 	{
-		id: 'nirvana',
-		name: 'Nirvana',
-		type: 'band'
+		id: 'massachusetts',
+		name: 'Massachusetts',
+		type: 'usa'
 	},
 	{
-		id: 'soundgarden',
-		name: 'Soundgarden',
-		type: 'band'
+		id: 'louisiana',
+		name: 'Louisiana',
+		type: 'usa'
 	},
 	{
-		id: 'blow',
-		name: 'Blow',
-		type: 'movie'
+		id: 'france',
+		name: 'France',
+		type: 'europe'
 	},
 	{
-		id: 'slap-shot',
-		name: 'Slap Shot',
-		type: 'movie'
+		id: 'spain',
+		name: 'Spain',
+		type: 'europe'
 	},
 	{
-		id: 'trainspotting',
-		name: 'Trainspotting',
-		type: 'movie'
+		id: 'england',
+		name: 'England',
+		type: 'europe'
 	}
 ];
 
 export const SONGS: SongListModel = [
 	{
 		id: 0,
-		name: 'Smells Like Teen Spirit',
-		source: 'nirvana'
+		name: 'Albany',
+		source: 'new-york'
 	},
 	{
 		id: 1,
-		name: 'Lithium',
-		source: 'nirvana'
+		name: 'New York',
+		source: 'new-york'
 	},
 	{
 		id: 2,
-		name: 'Heart-Shaped Box',
-		source: 'nirvana'
+		name: 'Schenectady',
+		source: 'new-york'
 	},
 	{
 		id: 3,
-		name: 'Strawman',
-		source: 'soundgarden'
+		name: 'Boston',
+		source: 'massachusetts'
 	},
 	{
 		id: 4,
-		name: 'Fell on Black Days',
-		source: 'soundgarden'
+		name: 'Worcester',
+		source: 'massachusetts'
 	},
 	{
 		id: 5,
-		name: 'Black Hole Sun',
-		source: 'soundgarden'
+		name: 'Lowell',
+		source: 'massachusetts'
 	},
 	{
 		id: 6,
-		name: 'Jeremy',
-		source: 'pearl-jam'
+		name: 'Baton Rouge',
+		source: 'louisiana'
 	},
 	{
 		id: 7,
-		name: 'Better Man',
-		source: 'pearl-jam'
+		name: 'New Orleans',
+		source: 'louisiana'
 	},
 	{
 		id: 8,
-		name: 'Light Years',
-		source: 'pearl-jam'
+		name: 'Lafayette',
+		source: 'louisiana'
 	},
 	{
 		id: 9,
-		name: 'Black Betty',
-		source: 'blow'
+		name: 'Madrid',
+		source: 'spain'
 	},
 	{
 		id: 10,
-		name: 'Blinded by the Light',
-		source: 'blow'
+		name: 'Barcelona',
+		source: 'spain'
 	},
 	{
 		id: 11,
-		name: 'Can\'t You See',
-		source: 'blow'
+		name: 'Paris',
+		source: 'france'
 	},
 	{
 		id: 12,
-		name: 'Right Back Where We Started From',
-		source: 'slap-shot'
+		name: 'Nice',
+		source: 'france'
 	},
 	{
 		id: 13,
-		name: 'The Passeger',
-		source: 'trainspotting'
+		name: 'London',
+		source: 'england'
 	},
 	{
 		id: 14,
-		name: 'Golden Years',
-		source: 'trainspotting'
+		name: 'Hastings',
+		source: 'england'
 	}
 ];

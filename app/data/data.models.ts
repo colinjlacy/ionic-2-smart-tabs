@@ -9,10 +9,10 @@ export interface SourceModel {
 
 export type SourceListModel = SourceModel[];
 
-export interface SongModel {
+export interface CityModel {
 	id: number,
 	name: string,
 	source: string
 }
 
-export type SongListModel = SongModel[];
+export type SongListModel = CityModel[];

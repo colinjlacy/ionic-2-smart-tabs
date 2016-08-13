@@ -1,6 +1,3 @@
-/**
- * Created by colinjlacy on 8/6/16.
- */
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
@@ -9,20 +6,12 @@ import { SOURCES } from './../../data/data';
 import { SourceListModel } from './../../data/data.models';
 
 @Component({
-	template: `
-	<ion-navbar *navbar>
-		<ion-title>List of Movies</ion-title>
-	</ion-navbar>
-
-	<ion-content>
-		<source-listing [sources]="movies"></source-listing>
-	</ion-content>
-	`,
+  	templateUrl: 'build/pages/usa/usa.html',
 	directives: [SourceListing]
 })
-export class MoviesPage {
-	public movies: SourceListModel;
+export class UsaPage {
+	public states: SourceListModel;
 	constructor(public nav: NavController) {
-		this.movies = SOURCES.filter(x => x.type === 'movie');
+		this.states = SOURCES.filter(x => x.type === 'usa');
 	}
 }
