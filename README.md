@@ -4,7 +4,7 @@ A simple app to demonstrate programmable nav hierarchy within the Ionic 2 Tabs n
 This is a simple, straightforward Ionic 2 app that I built to demonstrate programmatic nav hierarchy.  The goal of this was to demonstrate:
 - Default behavior of a tab navigation
 - Programmatically clearing the nav stack within a tab 
-- Demonstrate customized Android hardware button functionality
+- Customized Android hardware button functionality
 
 It was meant to answer some questions I received on [a blog post I wrote](https://webcake.co/exploring-nav-hierarchy-in-the-ionic-2-tabs-page/).
 
