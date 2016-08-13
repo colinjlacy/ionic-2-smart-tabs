@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core'
-import { Tab, Tabs, NavController } from 'ionic-angular';
+import { Tab, Tabs, NavController, Platform } from 'ionic-angular';
 
-import { HomePage } from '../home/home';
+import { UsaPage } from '../usa/usa';
 import { AboutPage } from '../about/about';
-import { MoviesPage } from '../movies/movies';
+import { EuropePage } from '../europe/europe';
 
 @Component({
 	templateUrl: 'build/pages/tabs/tabs.html'
@@ -11,21 +11,30 @@ import { MoviesPage } from '../movies/movies';
 export class TabsPage {
 
 	@ViewChild('homeTab') tabRef: Tab;
+	@ViewChild('tabs') tabs: Tabs;
 
 	private tab1Root: any;
 	private tab2Root: any;
 	private tab3Root: any;
 
-	constructor(private nav: NavController) {
+	constructor(private nav: NavController, private platform: Platform) {
 		// this tells the tabs component which Pages
 		// should be each tab's root Page
-		this.tab1Root = HomePage;
+		this.tab1Root = UsaPage;
 		this.tab2Root = AboutPage;
-		this.tab3Root = MoviesPage;
+		this.tab3Root = EuropePage;
+
+		this.platform.registerBackButtonAction(() => {
+			let child: Tab = this.tabs.getSelected();
+			if(child['_views'].length > 1) {
+				child.pop();
+			} else {
+				navigator['app'].exitApp();
+			}
+		});
 	}
 
 	showRoot() {
-		console.log('checking tab views');
 		let views = this.tabRef['_views'];
 		if(views.length > 1) {
 			views[views.length - 1].instance.nav.popToRoot({animate: false});

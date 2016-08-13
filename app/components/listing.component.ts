@@ -4,7 +4,7 @@
 import { Component, Input } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { SongListingPage } from '../pages/songs/songs';
+import { SongListingPage } from '../pages/songs/cities';
 import { SourceListModel } from '../data/data.models';
 
 @Component({
